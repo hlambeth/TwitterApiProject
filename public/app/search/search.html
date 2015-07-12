@@ -4,12 +4,12 @@
   <h2>{{link}}</h2>
    -->
     <div ng-model="data.statuses" ng-repeat="tweet in data.statuses">
-      <ol>
+      <ul>
         <li>{{tweet.text}}</li>
-        <!-- <li>{{tweet.source}}</li>
-        <li>{{tweet.lang}}</li>
+        <li>{{tweet.source}}</li>
+        <li><a ng-href="{{tweet.entities.urls[0].expanded_url}}"></a></li>
         <li>{{tweet.user.location}}</li>
-        <li>{{tweet.created_at | date: 'short' }}</li> -->
-      </ol>
+        <li>{{tweet.created_at | date: 'short' }}</li>
+      </ul>
   </div>
 </div>
