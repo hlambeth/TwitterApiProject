@@ -3,12 +3,15 @@
   <h2>{{$scope.link}}</h2>
   <h2>{{link}}</h2>
    -->
+   <input type="text" ng-model="name1">
+   <button ng-click="sendNames(name1)">submit</button>
     <div ng-model="data.statuses" ng-repeat="tweet in data.statuses">
       <ul>
         <li>{{tweet.text}}</li>
-        <li>{{tweet.source}}</li>
-        <li><a ng-href="{{tweet.entities.urls[0].expanded_url}}"></a></li>
-        <li>{{tweet.user.location}}</li>
+        <!-- <li>{{tweet.source}}</li> -->
+        <li ng-show="tweet.entities.urls[0].expanded_url">{{tweet.entities.urls[0].expanded_url}}"</li>
+        <!-- <li>{{tweet.user.location}}</li> -->
+        <li>@{{tweet.user.screen_name}}</li>
         <li>{{tweet.created_at | date: 'short' }}</li>
       </ul>
   </div>
