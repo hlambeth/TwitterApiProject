@@ -6,6 +6,8 @@ angular.module('myTwitter.tweetoff', [])
   $scope.nameTwo = "";
   $scope.oneFollowers;
   $scope.twoFollowers;
+  $scope.oneUrl = "avatar.png";
+  $scope.twoUrl = "avatar.png";
 
   //  $scope.getTweets = function() {
   //  return $http.post({
@@ -25,6 +27,8 @@ angular.module('myTwitter.tweetoff', [])
     }).success(function(data, status, headers, config) {
     $scope.oneFollowers = data[0].followers_count
     $scope.twoFollowers = data[1].followers_count
+    $scope.oneUrl = data[0].profile_image_url
+    $scope.twoUrl = data[1].profile_image_url
     console.log(data)
     // when the response is available
   }).
