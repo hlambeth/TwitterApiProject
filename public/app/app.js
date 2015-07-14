@@ -10,15 +10,15 @@
 //   })
 
 angular.module("myTwitter", [
-  'myTwitter.timeline',
+  'myTwitter.tweetoff',
   'ngRoute'
 ])
 
 .config(function($routeProvider, $httpProvider) {
   $routeProvider
-    .when('/timeline', {
-      templateUrl: 'app/timeline/timeline.html',
-      controller: 'TimelineController'
+    .when('/tweetoff', {
+      templateUrl: 'app/tweetoff/tweetoff.html',
+      controller: 'TweetOffController'
     })
     // .when('/search', {
     //   templateUrl: 'app/search/search.html',
