@@ -4,6 +4,8 @@ angular.module('myTwitter.tweetoff', [])
   $scope.data;
   $scope.nameOne = "";
   $scope.nameTwo = "";
+  $scope.oneFollowers;
+  $scope.twoFollowers;
 
   //  $scope.getTweets = function() {
   //  return $http.post({
@@ -20,6 +22,15 @@ angular.module('myTwitter.tweetoff', [])
     return $http.post('/tweets', {
       nameOne: $scope.nameOne,
       nameTwo: $scope.nameTwo
-    })// post
+    }).success(function(data, status, headers, config) {
+    $scope.oneFollowers = data[0].followers_count
+    $scope.twoFollowers = data[1].followers_count
+    console.log(data)
+    // when the response is available
+  }).
+  error(function(data, status, headers, config) {
+    // called asynchronously if an error occurs
+    // or server returns response with an error status.
+  });
  } // function
 }) // controller
