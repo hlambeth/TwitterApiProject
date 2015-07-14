@@ -21,7 +21,14 @@ body {
 }
 .img-cover {
   object-fit: cover;
+  border-radius: 8px;
   /*border: 1px solid lightgray;*/
+}
+.followers {
+  font-size: 22px;
+}
+.winner {
+  border: 8px solid lightgreen;
 }
 .height-margin {
   padding-top: 80px;
