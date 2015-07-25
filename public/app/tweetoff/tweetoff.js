@@ -5,8 +5,8 @@ angular.module('myTwitter.tweetoff', [])
   $scope.nameTwo = "jimmyfallon";
   $scope.oneFollowers;
   $scope.twoFollowers;
-  $scope.oneUrl = "/img/avatar.png";
-  $scope.twoUrl = "/img/avatar.png";
+  $scope.oneUrl = "";
+  $scope.twoUrl = "";
 
 
   $scope.getTweets = function () {
