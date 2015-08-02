@@ -1,3 +1,4 @@
+![TweetOffCover](/public/img/TweetOff.png)
 # TweetOff
 Enter in two twitter handles and see who has more followers!
 

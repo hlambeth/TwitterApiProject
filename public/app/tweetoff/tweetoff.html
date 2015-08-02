@@ -2,14 +2,15 @@
   <div class="row">
     <h1 class="text-center title">Tweet Off</h1>
     <div class="col-md-4 col-md-offset-2 text-center">
-      <img ng-class="(oneFollowers > twoFollowers) ? 'winner' : ''" class="img-cover" src="{{oneUrl}}" height="250px" width="250px">
+      <!-- <img ng-class="(oneFollowers > twoFollowers) ? 'winner' : ''" class="img-cover" src="{{oneUrl}}" height="250px" width="250px"> -->
+      <img ng-class="oneFollowers > twoFollowers ? 'winner' : 'loser'" class="img-cover" src="{{oneUrl}}" height="250px" width="250px">
       <h2>{{nameOne}}</h2>
       <p class="followers">{{oneFollowers | number}}</p>
       <input type="text" ng-model="nameOne" value="first handle">
     </div>
 
     <div class="col-md-4 text-center">
-      <img ng-class="{winner : twoFollowers > oneFollowers}" class="img-cover" src="{{twoUrl}}" height="250px" width="250px">
+      <img ng-class="twoFollowers > oneFollowers ? 'winner' : 'loser'" class="img-cover" src="{{twoUrl}}" height="250px" width="250px">
       <h2>{{nameTwo}}</h2>
       <p class="followers">{{twoFollowers | number}}</p>
       <input type="text" ng-model="nameTwo" value="second handle">

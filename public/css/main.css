@@ -25,7 +25,7 @@ body {
   object-fit: cover;
   /*border: 8px solid transparent;*/
   border-radius: 8px;
-	transition: border 1.5s ease;
+	transition: all 1.5s ease;
   /*border: 1px solid lightgray;*/
 }
 .followers {
@@ -35,7 +35,9 @@ body {
   border: 8px solid lightgreen;
 }
 .loser {
-  border: 8px solid tomato;
+  /*border: 8px solid gray;*/
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
 }
 .height-margin {
   padding-top: 80px;
